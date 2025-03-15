@@ -1,31 +1,24 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import "../styles/navbar.css";
+import "@/styles/navbar.css";
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen); 
-    };
-
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <nav className="navbar">
-            <div className="logo">Wachstetter Enterprises</div>  {/* Website name/logo */}
-
-            <ul className={isOpen ? "nav-links open" : "nav-links"}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/services">Services</Link></li>
-                <li><Link to="/blog">Services</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-
-            <div className="menu-toggle" onClick={toggleMenu}>
-                ☰  {/* Hamburger icon for mobile */}
+        <nav>
+        <h2 className ="logo">logo</h2>
+        {/* Hamburger Icon */}
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
             </div>
-        </nav>
-    );
+        <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#"> Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    )
 }
 
 export default Navbar;

@@ -46,6 +46,61 @@ export default function Location() {
                     </ul>
                 </section>
 
+                <section className="py-12 px-6 max-w-5xl mx-auto">
+                    <h2 className="text-2xl font-bold mb-6 text-center">Types of Appraisals We Offer</h2>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-base list-disc list-inside">
+                        <li>Residential Appraisals</li>
+                        <li>Commercial Property Appraisals</li>
+                        <li>FEMA 50% Rule Compliance Appraisals</li>
+                        <li>Divorce & Estate Valuation</li>
+                        <li>PMI Removal Appraisals</li>
+                        <li>Tax Appeal Appraisals</li>
+                        <li>Green Home Appraisals</li>
+                        <li>Luxury Property Appraisals</li>
+                    </ul>
+                </section>
+
+                <section className="py-12 px-6 max-w-3xl mx-auto">
+                    <h2 className="text-2xl font-bold mb-6 text-center">How We Determine Property Value</h2>
+                    <ul className="space-y-6 text-base list-disc list-inside">
+                        <li>
+                        <strong>Sales Comparison Approach:</strong> We analyze recent sales of similar properties to estimate value based on current market conditions.
+                        </li>
+                        <li>
+                        <strong>Cost Approach:</strong> We estimate the cost to rebuild the property from scratch, subtract depreciation, and add land value.
+                        </li>
+                        <li>
+                        <strong>Income Approach:</strong> Primarily used for investment properties, this method estimates value based on potential income generation.
+                        </li>
+                    </ul>
+                </section>
+
+                <section className="py-12 px-6 max-w-3xl mx-auto">
+                    <h2 className="text-2xl font-bold mb-6 text-center">When Clients Typically Request an Appraisal</h2>
+                    <ul className="space-y-4 text-base list-disc list-inside">
+                        <li><strong>Estate Planning or Inheritance:</strong> Establish the fair market value of inherited properties.</li>
+                        <li><strong>Divorce or Partnership Dissolution:</strong> Provide an objective value when dividing assets.</li>
+                        <li><strong>Private Sale or Purchase:</strong> Know the true value before listing or making an offer.</li>
+                        <li><strong>PMI Removal:</strong> Eliminate private mortgage insurance by proving equity.</li>
+                        <li><strong>Loan Qualification:</strong> Help banks determine the risk and loan amount.</li>
+                        <li><strong>Appealing Property Taxes:</strong> Use a third-party valuation to challenge over-assessed property values.</li>
+                    </ul>
+                </section>
+
+                <section className="py-12 px-6 bg-orange-50 text-center">
+                    <h2 className="text-2xl font-bold mb-4">Need an Appraisal in {formatted}?</h2>
+                    <p className="text-base max-w-xl mx-auto mb-6">
+                        Whether you're settling an estate, refinancing, or planning a renovation, we provide fast, certified appraisals throughout {formatted}.
+                    </p>
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-md transition">
+                        Get Your Appraisal Quote
+                    </button>
+                </section>
+
+
+
+
+
 
             </div>
 

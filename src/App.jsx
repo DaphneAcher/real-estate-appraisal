@@ -1,13 +1,12 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar"
 import { Route, BrowserRouter, Routes } from "react-router-dom"
-import ReactDOM from "react-dom/client";
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Home from "./pages/Home"
 import Journal from "./pages/Journal"
 import Services from "./pages/Services"
 import Location from "./pages/Location"
-import NoPage from "./pages/NoPage";
+import NoPage from "./pages/NoPage"
 
 function App() {
 

@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 
 export default function Location() {
     const params = useParams()
@@ -8,6 +9,14 @@ export default function Location() {
 
 
     return (
-        <h1>Property Appraiser in {formatted}</h1>
+        <>
+            <Helmet>
+                <title>Property Appraiser in {formatted}</title>
+                <meta name="description" content={`Certified home and commercial property appraisals in ${formatted}. Contact us for expert valuation services.`} />
+            </Helmet>
+
+            <h1>Property Appraiser in {formatted}</h1>
+
+        </>
     )
 }

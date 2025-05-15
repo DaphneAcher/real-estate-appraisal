@@ -15,17 +15,21 @@ function App() {
     <BrowserRouter> 
     <Navbar />
 
-    <Routes>
+    <div className="pt-24">
 
-      <Route path="/" element ={<Home />}/>
-      <Route path= "/about" element = {<About />}/>
-      <Route path="/contact" element = {<Contact />}/>
-      <Route path="/journal" element = {<Journal />}/>
-      <Route path="/services" element = {<Services />}/>
-      <Route path="/:location" element = {<Location />}/>
-      <Route path="*" element={<NoPage />}/>
+      <Routes>
 
-    </Routes>
+        <Route path="/" element ={<Home />}/>
+        <Route path= "/about" element = {<About />}/>
+        <Route path="/contact" element = {<Contact />}/>
+        <Route path="/journal" element = {<Journal />}/>
+        <Route path="/services" element = {<Services />}/>
+        <Route path="/:location" element = {<Location />}/>
+        <Route path="*" element={<NoPage />}/>
+
+      </Routes>
+
+    </div>
 
   </BrowserRouter>
 

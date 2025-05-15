@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold">About Page</h1>
-    </div>
+    
+   <section className="h-screen bg-[url('/your-image.jpg')] bg-cover bg-center flex items-center justify-center">
+        <h1 className="text-white text-5xl font-extrabold">Fort Lauderdale Appraisals</h1>
+    </section>
+
   );
 }

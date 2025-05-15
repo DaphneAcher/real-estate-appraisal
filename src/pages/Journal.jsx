@@ -1,7 +1,7 @@
 export default function Journal() {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold">About Page</h1>
+    <div className="p-20">
+      <h1 className="text-3xl font-bold">Journal</h1>
     </div>
   );
 }

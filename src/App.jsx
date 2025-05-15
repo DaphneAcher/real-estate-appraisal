@@ -6,6 +6,7 @@ import Contact from "./pages/Contact"
 import Home from "./pages/Home"
 import Journal from "./pages/Journal"
 import Services from "./pages/Services"
+import Location from "./pages/Location"
 import NoPage from "./pages/NoPage";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="/contact" element = {<Contact />}/>
       <Route path="/journal" element = {<Journal />}/>
       <Route path="/services" element = {<Services />}/>
+      <Route path="/:location" element = {<Location />}/>
       <Route path="*" element={<NoPage />}/>
 
     </Routes>

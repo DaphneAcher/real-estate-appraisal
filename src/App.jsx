@@ -1,10 +1,12 @@
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import { Route, BrowserRouter, Routes } from "react-router-dom"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Home from "./pages/Home"
 import Journal from "./pages/Journal"
 import Services from "./pages/Services"
+import ServiceAreas from "./pages/ServiceAreas"
 import Location from "./pages/Location"
 import NoPage from "./pages/NoPage"
 
@@ -14,6 +16,7 @@ function App() {
 
     <BrowserRouter> 
     <Navbar />
+    <Footer />
 
     <div className="pt-24">
 
@@ -24,6 +27,7 @@ function App() {
         <Route path="/contact" element = {<Contact />}/>
         <Route path="/journal" element = {<Journal />}/>
         <Route path="/services" element = {<Services />}/>
+        <Route path="/service-areas" element={<ServiceAreas />} />
         <Route path="/:location" element = {<Location />}/>
         <Route path="*" element={<NoPage />}/>
 

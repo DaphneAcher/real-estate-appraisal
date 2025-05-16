@@ -15,27 +15,29 @@ function App() {
   return (
 
     <BrowserRouter> 
-    <Navbar />
-    <Footer />
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
 
-    <div className="pt-24">
+      <main className="flex-grow pt-24">
 
-      <Routes>
+        <Routes>
 
-        <Route path="/" element ={<Home />}/>
-        <Route path= "/about" element = {<About />}/>
-        <Route path="/contact" element = {<Contact />}/>
-        <Route path="/journal" element = {<Journal />}/>
-        <Route path="/services" element = {<Services />}/>
-        <Route path="/service-areas" element={<ServiceAreas />} />
-        <Route path="/:location" element = {<Location />}/>
-        <Route path="*" element={<NoPage />}/>
+          <Route path="/" element ={<Home />}/>
+          <Route path= "/about" element = {<About />}/>
+          <Route path="/contact" element = {<Contact />}/>
+          <Route path="/journal" element = {<Journal />}/>
+          <Route path="/services" element = {<Services />}/>
+          <Route path="/service-areas" element={<ServiceAreas />} />
+          <Route path="/:location" element = {<Location />}/>
+          <Route path="*" element={<NoPage />}/>
 
-      </Routes>
+        </Routes>
+      </main>
+      <Footer />
+
 
     </div>
-
-  </BrowserRouter>
+    </BrowserRouter>
 
 
   );

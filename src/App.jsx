@@ -9,6 +9,7 @@ import Services from "./pages/Services"
 import ServiceAreas from "./pages/ServiceAreas"
 import Location from "./pages/Location"
 import NoPage from "./pages/NoPage"
+import OrderForm from "./pages/OrderForm"
 
 function App() {
 
@@ -27,8 +28,9 @@ function App() {
           <Route path="/contact" element = {<Contact />}/>
           <Route path="/journal" element = {<Journal />}/>
           <Route path="/services" element = {<Services />}/>
-          <Route path="/service-areas" element={<ServiceAreas />} />
+          <Route path="/service-areas" element={<ServiceAreas />}/>
           <Route path="/:location" element = {<Location />}/>
+          <Route path="/order-form" element = {<OrderForm />}/>
           <Route path="*" element={<NoPage />}/>
 
         </Routes>

@@ -3,13 +3,15 @@ import Quote from "../components/Quote"
 export default function Home() {
   return (
     <>
-    <section className="h-[70vh] flex flex-col justify-center items-center text-center px-6">
-       <h1 className="text-4xl md:text-5xl font-bold max-w-3xl mb-6">Wachtstetter Enterprises Inc</h1>
+      <section 
+        className="h-[70vh] flex flex-col justify-center items-center text-center px-6 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/src/assets/hero1.jpg')" }}
+>       <h1 className="text-5xl md:text-6xl font-bold max-w-5xl mb-6 text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.7)]">Wachtstetter Enterprises Inc</h1>
        <div className="flex gap-4">
           <a href="/services" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold">
             View Services
           </a>
-          <a href="/contact" className="border border-gray-500 text-gray-800 px-6 py-3 rounded-md font-semibold">
+          <a href="/contact" className="border border-white text-white px-6 py-3 rounded-md font-semibold">
             Contact Us
           </a>
         </div>

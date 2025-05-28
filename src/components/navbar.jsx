@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     return (
         <>
-        <nav className="bg-indigo-100/80 border-b border-indigo-200 shadow-sm backdrop-saturate-150 backdrop-brightness-110 fixed top-0 left-0 right-0 z-50">
-            <div className="max-w-screen-xl flex justify-between items-center mx-auto px-6 py-4">
-
+        <nav className="bg-black border-b border-neutral-800 shadow-sm fixed top-0 left-0 right-0 z-50 font-sans text-white">
+            <div className="max-w-screen-xl flex justify-between items-center mx-auto px-8 py-6">
                 <img className="h-12" src="/assets/logo.svg" alt="Wachstetter logo"/>
 
                 <div className="hidden md:flex gap-10 font-lato text-xl font-bold">

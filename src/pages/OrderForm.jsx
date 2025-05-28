@@ -1,7 +1,7 @@
 export default function OrderForm() {
     return(
         <section className="bg-white p-8 rounded shadow py-5 px-6 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-6">Send us a messege</h2>
+            <h2 className="text-2xl font-bold text-center mb-6">Order Form</h2>
             <form className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <input type="text" placeholder="First Name *" className="border p-3 rounded" required />
                 <input type="text" placeholder="Last Name *" className="border p-3 rounded" required />

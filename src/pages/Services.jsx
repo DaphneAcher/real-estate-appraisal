@@ -1,3 +1,5 @@
+import Quote from "../components/Quote"
+
 export default function Services() {
   return (
     <>
@@ -31,6 +33,7 @@ export default function Services() {
         </div>
       </section>
 
+      <Quote />
     </>
   )
 }

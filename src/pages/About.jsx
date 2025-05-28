@@ -1,3 +1,5 @@
+import Quote from "../components/Quote"
+
 export default function About() {
   return (
     <>
@@ -51,6 +53,8 @@ export default function About() {
         <li><strong>Appraisal Management Companies:</strong> First American, Coester VMS, Marketwise Valuation, Sunshine AMS</li>
       </ul>
     </section>
+
+    <Quote />
     
     </>
 

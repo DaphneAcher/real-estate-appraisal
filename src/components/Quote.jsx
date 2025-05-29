@@ -4,7 +4,7 @@ export default function Quote () {
         style={{ backgroundImage: "url('/src/assets/apprBack.jpg')" }} >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Side */}
-        <div className="bg-orange-500 text-white p-8 rounded shadow">
+        <div className="bg-[#5C4033] text-white p-8 rounded shadow">
           <p className="uppercase tracking-wide text-sm mb-2">Let’s Chat</p>
           <h3 className="text-2xl font-bold mb-4">Thinking About an Appraisal?</h3>
           <p className="mb-4">
@@ -12,7 +12,7 @@ export default function Quote () {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-white text-orange-500 font-semibold px-6 py-2 rounded shadow hover:bg-orange-100"
+            className="inline-block bg-white text-[#5C4033] font-semibold px-6 py-2 rounded shadow hover:bg-brown-100"
           >
             Contact Us →
           </a>
@@ -28,7 +28,7 @@ export default function Quote () {
             <input type="text" placeholder="Property Address *" className="border p-3 rounded md:col-span-1" required />
           </div>
           <textarea placeholder="Services Needed... *" className="border p-3 rounded w-full h-28 resize-none" required />
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded w-full">
+          <button className="bg-[#5C4033] hover:bg-[#D4AF37] text-white font-semibold px-6 py-3 rounded w-full">
             Send Message
           </button>
         </form>

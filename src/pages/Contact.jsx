@@ -18,7 +18,7 @@ export default function Contact() {
       </form>
 
       <div className="text-center">
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-md">
+        <button className="bg-[#5C4033] hover:bg-[#D4AF37] text-white font-semibold px-6 py-3 rounded-md">
           Send Message
         </button>
       </div>

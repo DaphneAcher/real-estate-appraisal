@@ -14,6 +14,41 @@ export default function Location() {
                 <meta name="description" content={`Certified home and commercial property appraisals in ${formatted}. Contact us for expert valuation services.`} />
             </Helmet>
 
+            <section className="relative h-[55vh] flex flex-col justify-center items-center text-center px-6 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/src/assets/hero1.jpg')" }}>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10 z-0"></div>
+                <div className="relative z-10 px-6">
+                    <h1 className="text-6xl md:text-7xl font-extrabold max-w-6xl mb-8 text-white drop-shadow-[0_6px_10px_rgba(0,0,0,0.85)]">
+                        REAL ESTATE APPRAISALS IN {formatted.toUpperCase()}
+                    </h1>
+                    <div className="flex gap-6 justify-center">
+                        <a href="/services" className="bg-[#5C4033] hover:bg-[#D4AF37] text-white text-lg md:text-xl px-8 py-4 rounded-md font-semibold tracking-wide">
+                            View Services
+                        </a>
+                        <a href="/contact" className="border border-white text-white text-lg md:text-xl px-8 py-4 rounded-md font-semibold tracking-wide">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-16 px-6 max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12">Our Appraisal Services</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="bg-white border p-6 rounded shadow">
+                    <h3 className="text-xl font-bold mb-2">Residential Appraisals</h3>
+                    <p className="text-base text-gray-700">Single-family homes, townhomes, condos, and luxury properties—tailored reports for loans, legal, and planning needs.</p>
+                    </div>
+                    <div className="bg-white border p-6 rounded shadow">
+                    <h3 className="text-xl font-bold mb-2">Commercial Appraisals</h3>
+                    <p className="text-base text-gray-700">Warehouses, retail, and income-producing properties, appraised using income and market-based approaches.</p>
+                    </div>
+                    <div className="bg-white border p-6 rounded shadow">
+                    <h3 className="text-xl font-bold mb-2">FEMA 50% Rule Appraisals</h3>
+                    <p className="text-base text-gray-700">We help property owners comply with FEMA requirements by providing reliable structure-only valuation reports.</p>
+                    </div>
+                </div>
+            </section>
+
             <div>
                 <section className="py-12 px-6 text-center">
                     <h1 className="text-4xl font-bold">Certified Property Appraisals in {formatted}</h1>
@@ -21,7 +56,7 @@ export default function Location() {
                         Residential, commercial, and FEMA 50% Rule appraisals trusted across {formatted}.
                     </p>
                     <div className="mt-6 flex justify-center gap-4">
-                        <button className="bg-orange-500 text-white px-4 py-2 rounded-md font-semibold">Request Appraisal</button>
+                        <button className="bg-[#5C4033] hover:bg-[#D4AF37] text-white px-4 py-2 rounded-md font-semibold">Request Appraisal</button>
                         <button className="border border-gray-400 text-gray-800 px-4 py-2 rounded-md">Contact Us</button>
                     </div>
                 </section>
@@ -90,7 +125,7 @@ export default function Location() {
                     <p className="text-base max-w-xl mx-auto mb-6">
                         Whether you're settling an estate, refinancing, or planning a renovation, we provide fast, certified appraisals throughout {formatted}.
                     </p>
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-md transition">
+                    <button className="bg-[#5C4033] hover:bg-[#D4AF37] text-white font-bold px-6 py-3 rounded-md transition">
                         Get Your Appraisal Quote
                     </button>
                 </section>

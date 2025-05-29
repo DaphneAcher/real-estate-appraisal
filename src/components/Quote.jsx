@@ -1,11 +1,12 @@
 export default function Quote () {
   return (
-    <section className="bg-orange-50 py-12 px-6">
+    <section className= "w-full py-12 px-4 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/src/assets/apprBack.jpg')" }} >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Side */}
         <div className="bg-orange-500 text-white p-8 rounded shadow">
-          <p className="uppercase tracking-wide text-sm mb-2">Let’s Talk</p>
-          <h3 className="text-2xl font-bold mb-4">Need an Appraisal Right Now?</h3>
+          <p className="uppercase tracking-wide text-sm mb-2">Let’s Chat</p>
+          <h3 className="text-2xl font-bold mb-4">Thinking About an Appraisal?</h3>
           <p className="mb-4">
             <strong>Call:</strong> 786.712.5002
           </p>
@@ -35,3 +36,4 @@ export default function Quote () {
     </section>
   );
 }
+

@@ -5,7 +5,7 @@ export default function Navbar() {
         <>
         <nav className="bg-black border-b border-neutral-800 shadow-sm fixed top-0 left-0 right-0 z-50 font-sans text-white">
             <div className="max-w-screen-xl flex justify-between items-center mx-auto px-8 py-6">
-                <img className="h-12" src="/assets/logo.svg" alt="Wachstetter logo"/>
+                <img src="/logoVector.svg" alt="Wachtstetter logo" className="h-16 w-auto" />
 
                 <div className="hidden md:flex gap-10 font-lato text-xl font-bold">
                     <Link to="/" className="hover:text-blue-300 transition">Home</Link>

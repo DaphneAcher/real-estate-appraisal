@@ -38,3 +38,7 @@ const cities = [
 ];
 
 export default cities;
+
+export const citySlugs = cities.map(city =>
+  city.toLowerCase().replace(/\s+/g, "-")
+);

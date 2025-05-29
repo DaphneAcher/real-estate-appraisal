@@ -1,9 +1,15 @@
-import { useParams } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async"
+import { citySlugs } from "../data/cities";
+
 
 export default function Location() {
     const params = useParams()
     const location = params.location
+
+    if (!citySlugs.includes(location)) {
+    return <Navigate to="/404" replace />;
+  }
 
     const formatted = location.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
 

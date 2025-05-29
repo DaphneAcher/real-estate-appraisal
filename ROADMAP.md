@@ -10,7 +10,7 @@ This roadmap outlines the phases of development, focusing on SEO, performance, a
 - [x] Add navigation bar with routes to Services, Journal, Contact
 - [x] Add "Appraise My Home" order form page
 - [ ] Wire up Contact Form backend (FastAPI or other)
-- [ ] Add persistent CTA component across multiple pages
+- [x] Add persistent CTA component across multiple pages
 - [ ] Set up responsive layout (mobile/tablet support)
 
 ---
@@ -28,7 +28,7 @@ This roadmap outlines the phases of development, focusing on SEO, performance, a
 
 ## 📍 Phase 3: Native Accessibility (replace UserWay)
 
-- [ ] Use semantic HTML (`<main>`, `<section>`, `<header>`, etc.)
+- [x] Use semantic HTML (`<main>`, `<section>`, `<header>`, etc.)
 - [ ] Label all form inputs with `label` or `aria-label`
 - [ ] Add `aria-live` and `aria-describedby` for dynamic content
 - [ ] Ensure keyboard navigability (tab index, skip to content link)

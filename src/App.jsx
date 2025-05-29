@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-import { Route, BrowserRouter, Routes } from "react-router-dom"
+import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Home from "./pages/Home"
@@ -22,18 +22,22 @@ function App() {
       <main className="flex-grow pt-24">
 
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/journal" element={<Journal />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/service-areas" element={<ServiceAreas />} />
+          <Route path="/order-form" element={<OrderForm />} />
+          <Route path="/404" element={<NoPage />} />
 
-          <Route path="/" element ={<Home />}/>
-          <Route path= "/about" element = {<About />}/>
-          <Route path="/contact" element = {<Contact />}/>
-          <Route path="/journal" element = {<Journal />}/>
-          <Route path="/services" element = {<Services />}/>
-          <Route path="/service-areas" element={<ServiceAreas />}/>
-          <Route path="/:location" element = {<Location />}/>
-          <Route path="/order-form" element = {<OrderForm />}/>
-          <Route path="*" element={<NoPage />}/>
+          {/* This must come last before wildcard */}
+          <Route path="/:location" element={<Location />} />
 
+          {/* Catch-all */}
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
+
       </main>
       <Footer />
 

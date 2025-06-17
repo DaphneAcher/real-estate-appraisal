@@ -30,8 +30,6 @@ function App() {
           <Route path="/service-areas" element={<ServiceAreas />} />
           <Route path="/order-form" element={<OrderForm />} />
           <Route path="/404" element={<NoPage />} />
-
-          {/* This must come last before wildcard */}
           <Route path="/:location" element={<Location />} />
 
           {/* Catch-all */}

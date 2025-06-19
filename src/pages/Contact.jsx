@@ -11,7 +11,7 @@ export default function Contact() {
       message: formData.get("message"),
     };
 
-    fetch("https://localhost:8000/contact", {
+    fetch("http://localhost:8000/contact", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(payload),
@@ -39,17 +39,17 @@ export default function Contact() {
        <h2 className="text-2xl font-bold text-center mb-6">Send us a messege</h2>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <input type="text" placeholder="Your Name *" name = "name" className="border p-3 rounded" required />
-        <input type="tel" placeholder="Phone Number *" className="border p-3 rounded" required />
-        <input type="email" placeholder="Email Address *" email = "email" className="border p-3 rounded md:col-span-1" required />
-        <input type="text" placeholder="Property Address *" message = "message" className="border p-3 rounded md:col-span-1" required />
-        <textarea placeholder="Services Needed... *" className="border p-3 rounded md:col-span-2 h-32 resize-none" required />
+        <input type="tel" placeholder="Phone Number *" name = "tel" className="border p-3 rounded" required />
+        <input type="email" placeholder="Email Address *" name = "email" className="border p-3 rounded md:col-span-1" required />
+        <input type="text" placeholder="Property Address *" name = "address" className="border p-3 rounded md:col-span-1" required />
+        <textarea placeholder="Services Needed... *" name = "message" className="border p-3 rounded md:col-span-2 h-32 resize-none" required />
+      
+        <div className="text-center">
+          <button className="bg-[#5C4033] hover:bg-[#D4AF37] text-white font-semibold px-6 py-3 rounded-md">
+            Send Message
+          </button>
+        </div>
       </form>
-
-      <div className="text-center">
-        <button className="bg-[#5C4033] hover:bg-[#D4AF37] text-white font-semibold px-6 py-3 rounded-md">
-          Send Message
-        </button>
-      </div>
       
     </section>
 

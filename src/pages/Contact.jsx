@@ -1,4 +1,32 @@
 export default function Contact() {
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    fetch("https://localhost:8000/contact", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Server Response:", data);
+        alert("Message Sent")
+      })
+      .catch((err) => {
+        console.error("Submisson error:", err);
+        alert("Something went wrong.");
+      })
+
+  }
   return (
     <>
     <section className="py-12 px-6 max-w-4xl mx-auto">
@@ -9,11 +37,11 @@ export default function Contact() {
        </div>
 
        <h2 className="text-2xl font-bold text-center mb-6">Send us a messege</h2>
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <input type="text" placeholder="Your Name *" className="border p-3 rounded" required />
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <input type="text" placeholder="Your Name *" name = "name" className="border p-3 rounded" required />
         <input type="tel" placeholder="Phone Number *" className="border p-3 rounded" required />
-        <input type="email" placeholder="Email Address *" className="border p-3 rounded md:col-span-1" required />
-        <input type="text" placeholder="Property Address *" className="border p-3 rounded md:col-span-1" required />
+        <input type="email" placeholder="Email Address *" email = "email" className="border p-3 rounded md:col-span-1" required />
+        <input type="text" placeholder="Property Address *" message = "message" className="border p-3 rounded md:col-span-1" required />
         <textarea placeholder="Services Needed... *" className="border p-3 rounded md:col-span-2 h-32 resize-none" required />
       </form>
 

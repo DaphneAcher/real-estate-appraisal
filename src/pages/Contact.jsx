@@ -8,6 +8,8 @@ export default function Contact() {
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
+      tel: formData.get("tel"),
+      address: formData.get("address"),
       message: formData.get("message"),
     };
 

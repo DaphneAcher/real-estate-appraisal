@@ -16,7 +16,7 @@ export default function Navbar() {
                 </div>
 
 
-                <a href="/order-form" className="bg-[#5C4033] hover:bg-[#D4AF37] text-white text-lg md:text-xl px-8 py-4 rounded-md font-semibold tracking-wide">Appraise My Home</a>
+                <a href="/order-form" className="bg-[#5C4033] hover:bg-[#D4AF37] text-white text-lg md:text-xl px-8 py-4 rounded-md font-semibold tracking-wide">Appraise Now</a>
 
 
             </div>

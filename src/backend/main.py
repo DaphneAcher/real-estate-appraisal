@@ -30,11 +30,19 @@ class ContactForm (BaseModel):
     tel: str
     address: str
     message: str
+    source: str = "contact"
 
-def send_email(name: str, email: str, tel: str, address: str, message: str):
+def send_email(name: str, email: str, tel: str, address: str, message: str, source: str):
     try:
+        subject_map = {
+            "order-form": f"New Order Request from {name}",
+            "quote": f"Quote Request from {name}",
+            "contact": f"New Contact Inquiry from {name}"
+        }
+        subject = subject_map.get(source, f"Message from {name}")
+
         msg = EmailMessage()
-        msg["subject"] = f"New appraisal inquiry from {name}"
+        msg["subject"] = subject
         msg["From"] = EMAIL_USER
         msg["To"] = EMAIL_RECEIVER
         msg.set_content(f"""
@@ -61,6 +69,7 @@ def get_content(form: ContactForm):
         email=form.email,
         tel=form.tel,
         address=form.address,
-        message=form.message
+        message=form.message,
+        source=form.source
     )
     return{"status": "true"}

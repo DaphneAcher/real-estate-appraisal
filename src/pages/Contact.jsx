@@ -22,6 +22,7 @@ export default function Contact() {
       .then((data) => {
         console.log("Server Response:", data);
         alert("Message Sent")
+        e.target.reset();
       })
       .catch((err) => {
         console.error("Submisson error:", err);

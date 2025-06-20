@@ -19,6 +19,13 @@ function App() {
     <HelmetProvider>
       <BrowserRouter> 
       <div className="flex flex-col min-h-screen">
+        <a
+            href="#main-content"
+            className="absolute left-[-999px] focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:text-black focus:p-2 focus:rounded shadow transition"
+          >
+            Skip to main content
+          </a>
+          
         <Navbar />
 
         <main className="flex-grow pt-24">

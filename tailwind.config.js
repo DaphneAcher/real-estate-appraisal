@@ -6,8 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        lato: ['Lato', 'sans-serif'],
+    fontFamily: {
+        serif: ['"DM Serif Display"', 'serif'],
+        sans: ['"Work Sans"', 'sans-serif'],
       },
     },
   },

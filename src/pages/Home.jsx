@@ -1,21 +1,30 @@
 import Quote from "../components/Quote"
+import { Link } from "react-router-dom";
+import heroImage from '/src/assets/hero1.jpg';
+
 
 export default function Home() {
   return (
     <>
-    <section className="relative h-[55vh] flex flex-col justify-center items-center text-center px-6 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/src/assets/hero1.jpg')" }}>       
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10 z-0"></div>
-      <div className="relative z-10 px-6">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-[0_6px_10px_rgba(0,0,0,0.85)]">
-            REAL ESTATE APPRAISALS IN SOUTH FLORIDA</h1>
-          <div className="flex gap-6 justify-center">
-            <a href="/services" className="bg-[#5C4033] hover:bg-[#D4AF37] text-white text-lg md:text-xl px-8 py-4 rounded-md font-semibold tracking-wide">
-              View Services
-            </a>
-            <a href="/contact" className="border border-white text-white text-lg md:text-xl px-8 py-4 rounded-md font-semibold tracking-wide">
-              Contact Us
-            </a>
-          </div>
+    <section className="h-[55vh] relative flex items-start justify-center pt-32 text-white bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-0"></div>
+
+      {/* Text Block */}
+      <div className="relative z-10 max-w-xl mx-auto px-4 text-center">
+        <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-snug tracking-wide mb-10 w-full max-w-[28rem] sm:max-w-[32rem] md:max-w-[36rem] mx-auto text-center">
+          <span className="whitespace-nowrap">Home Appraisals</span><br />
+          <span className="block whitespace-nowrap">in South Florida</span>
+        </h1>
+
+        <div className="flex justify-center gap-4">
+          <Link to="/services" className="bg-[#4D2C20] hover:bg-yellow-600 text-white text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded font-semibold transition">
+            View Services
+          </Link>
+          <Link to="/contact" className="border border-white hover:bg-white hover:text-black text-white text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded font-semibold transition">
+            Contact Us
+          </Link>
+        </div>
       </div>
     </section>
 

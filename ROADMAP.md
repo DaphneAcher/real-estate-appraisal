@@ -9,7 +9,7 @@ This roadmap outlines the phases of development, focusing on SEO, performance, a
 - [x] Build homepage layout (hero, services, about, testimonials)
 - [x] Add navigation bar with routes to Services, Journal, Contact
 - [x] Add "Appraise My Home" order form page
-- [ ] Wire up Contact Form backend (FastAPI or other)
+- [X] Wire up Contact Form backend (FastAPI or other)
 - [x] Add persistent CTA component across multiple pages
 - [ ] Set up responsive layout (mobile/tablet support)
 

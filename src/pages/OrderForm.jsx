@@ -1,4 +1,7 @@
+import {useState} from "react"
+
 export default function OrderForm() {
+    const [type, setType] = useState("")
     function handleOrderForm(e){
         e.preventDefault();
 
@@ -9,7 +12,7 @@ export default function OrderForm() {
             tel: formData.get("tel"),
             email: formData.get('email'),
             address: `${formData.get("street")}, ${formData.get("street2")}, ${formData.get("city")} ${formData.get("zip")}`,
-            message: `Appraisal Type: ${formData.get("type")}\nInstructions: ${formData.get("instructions")}`,
+            message: `Appraisal Type: ${type}\nInstructions: ${formData.get("instructions")}`,
             source: "order-form"            
         };
 
@@ -18,11 +21,11 @@ export default function OrderForm() {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(payload),
         })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log("Server Response:", data);
+        .then((res) => {
+            console.log("Server status:", res.status);
             alert("Order Submitted!");
             e.target.reset()
+            setType("");
         })
         .catch((err) => {
             console.error("Submission error:", err);
@@ -39,15 +42,24 @@ export default function OrderForm() {
                 <input type="tel" placeholder="Phone Number *" name="tel" className="border p-3 rounded" required />
                 <input type="email" placeholder="Email Address *" name="email" className="border p-3 rounded md:col-span-1" required />
                 <input type="text" placeholder="Street Address *" name="street" className="border p-3 rounded md:col-span-1" required />
-                <input type="text" placeholder="Street Address Line 2 *" name="street2" className="border p-3 rounded md:col-span-1" required />      
+                <input type="text" placeholder="Street Address Line 2 " name="street2" className="border p-3 rounded md:col-span-1"/>      
                 <input type="text" placeholder="City *" name="city" className="border p-3 rounded md:col-span-1" required />      
                 <input type="text" placeholder="Postal/Zip Code *" name="zip" className="border p-3 rounded md:col-span-1" required />
-                <select name= "type" required className="border p-3 rounded md:col-span-2">
-                    <option value="" disabled selected> Select Appraisal Type *</option>
+                <select
+                    name="type"
+                    required
+                    value={type || ""}
+                    onChange={(e) => setType(e.target.value)}
+                    className="border p-3 rounded md:col-span-2"
+                >
+                    <option value="" disabled>
+                        Select Appraisal Type *
+                    </option>
                     <option value="Commerical">Commerical</option>
                     <option value="Residential">Residential</option>
                     <option value="FEMA">FEMA</option>
                 </select>
+
                 <textarea placeholder="Instructions *" name="instructions" className="border p-3 rounded md:col-span-2 h-32 resize-none" required />
 
                 <div className="text-center">

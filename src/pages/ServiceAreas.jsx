@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import cities from "../data/cities";
+import { Helmet } from "react-helmet-async";
+
 
 export default function ServiceAreas() {
     return (
+        <>
+        <Helmet>
+        <title>Areas We Serve | South Florida Property Appraisals</title>
+        <meta name="description" content="Wachtstetter Enterprises provides certified property appraisals throughout Broward, Miami-Dade, and Palm Beach Counties." />
+        </Helmet>
 
          <div className="py-12 px-6 max-w-4xl mx-auto">
             <h1 className="text-3xl font-bold text-center mb-6">Our Florida Service Areas</h1>
@@ -23,5 +30,7 @@ export default function ServiceAreas() {
                 })}
             </ul>
         </div>
+
+        </>
     );
 }

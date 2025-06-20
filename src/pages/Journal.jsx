@@ -1,8 +1,18 @@
+import { Helmet } from "react-helmet-async";
+
 import { journalPosts } from "../data/journalPosts";
 
 export default function Journal() {
   return (
     <>
+    <Helmet>
+      <title>Appraisal Tips & Real Estate News | Wachtstetter Journal</title>
+      <meta 
+        name="description" 
+        content="Read our journal for expert real estate appraisal tips, market insights, and South Florida industry updates." 
+      />
+    </Helmet>
+
     <section className="py-12 px-6 max-w-6xl mx-auto">
        <h2 className="text-3xl font-bold text-center mb-12">Real Estate Insights & Appraisal Tips</h2>
         <div className="grid grid-cols-1 gap-8">

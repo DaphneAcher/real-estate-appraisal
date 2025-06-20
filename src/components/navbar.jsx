@@ -12,7 +12,7 @@ export default function Navbar() {
             <img src="/logoVector.svg" alt="Wachtstetter logo" className="h-16 w-auto" />
 
             {/* Desktop Nav Links */}
-            <div className="hidden md:flex flex-1 justify-center gap-10 text-xl font-bold">
+            <div className="hidden lg:flex flex-1 justify-center gap-10 text-xl font-bold">
             <Link to="/" className="hover:text-blue-300 transition">Home</Link>
             <Link to="/about" className="hover:text-blue-300 transition">About</Link>
             <Link to="/services" className="hover:text-blue-300 transition">Services</Link>
@@ -23,7 +23,7 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <Link
             to="/order-form"
-            className="hidden md:block bg-[#4D2C20] hover:bg-yellow-500 text-white font-semibold px-4 py-2 rounded transition ml-4"
+            className="hidden lg:block bg-[#4D2C20] hover:bg-yellow-500 text-white font-semibold px-4 py-2 rounded transition ml-4"
             >
             Appraise Now
             </Link>
@@ -31,7 +31,7 @@ export default function Navbar() {
             {/* Hamburger for Mobile */}
             <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden focus:outline-none"
+            className="lg:hidden focus:outline-none"
             aria-label="Toggle menu"
             >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function Navbar() {
 
         {/* Mobile Nav */}
         {isOpen && (
-            <div className="md:hidden px-6 pb-6 space-y-4 text-lg font-semibold">
+            <div className="lg:hidden px-6 pb-6 space-y-4 text-lg font-semibold">
             <Link to="/" onClick={() => setIsOpen(false)} className="block hover:text-blue-300"> Home</Link>
             <Link to="/about" onClick={() => setIsOpen(false)} className="block hover:text-blue-300">About</Link>
             <Link to="/services" onClick={() => setIsOpen(false)} className="block hover:text-blue-300">Services</Link>

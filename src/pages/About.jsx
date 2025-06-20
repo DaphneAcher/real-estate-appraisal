@@ -1,8 +1,18 @@
+import { Helmet } from "react-helmet-async";
+
 import Quote from "../components/Quote"
 
 export default function About() {
   return (
     <>
+    <Helmet>
+      <title>About Our Appraisal Expertise | Wachtstetter Enterprises</title>
+      <meta 
+        name="description" 
+        content="Meet Thomas Wachtstetter, ASA — a certified appraiser with 38+ years of experience in South Florida real estate valuations for residential, commercial, and FEMA 50% Rule cases." 
+      />
+    </Helmet>
+
     <section className="py-12 px-6 max-w-3xl mx-auto">
       <h2 className="text-2xl font-bold text-center mb-4">About Wachtstetter Enterprises Inc</h2>
        <p className="text-base text-gray-700 text-center">Wachtstetter Enterprises Inc has been a trusted name in the South Florida appraisal space for over 38 years. Founded to deliver expert real estate appraisals with fast turnaround times, we prioritize accuracy, client service, and professionalism in every report.</p>

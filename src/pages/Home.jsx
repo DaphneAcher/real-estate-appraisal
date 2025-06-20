@@ -1,11 +1,20 @@
 import Quote from "../components/Quote"
 import { Link } from "react-router-dom";
 import heroImage from '/src/assets/hero1.jpg';
+import { Helmet } from "react-helmet-async";
+
 
 
 export default function Home() {
   return (
     <>
+    <Helmet>
+      <title>South Florida Home Appraisals | Wachtstetter Enterprises Inc</title>
+      <meta
+        name="description"
+        content="38+ years of certified home appraisal expertise in South Florida. Fast turnaround, FEMA 50% Rule appraisals, and legal-ready reports."
+      />
+    </Helmet>
     <section className="h-[55vh] relative flex items-start justify-center pt-32 text-white bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-0"></div>

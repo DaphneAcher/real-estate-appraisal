@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 export default function Contact() {
 
   function handleSubmit(e) {
@@ -32,6 +34,14 @@ export default function Contact() {
   }
   return (
     <>
+    <Helmet>
+      <title>Contact Our South Florida Appraisal Team | Wachtstetter Enterprises</title>
+      <meta 
+        name="description" 
+        content="Get in touch with Wachtstetter Enterprises for accurate and certified property appraisals in South Florida. Call or message us to request a quote." 
+      />
+    </Helmet>
+
     <section className="py-12 px-6 max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-6">Call Us</h2>
        <div className="text-center mb-12 space-y-2 text-orange-600 font-medium">

@@ -14,6 +14,48 @@ export default function Home() {
         name="description"
         content="38+ years of certified home appraisal expertise in South Florida. Fast turnaround, FEMA 50% Rule appraisals, and legal-ready reports."
       />
+      <script type="application/ld+json">
+      {`
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Wachtstetter Enterprises Inc",
+          "image": "https://honestappraiser.com/logoVector.svg",
+          "@id": "https://honestappraiser.com/",
+          "url": "https://honestappraiser.com/",
+          "telephone": "954-791-4667",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4200 Davie Rd",
+            "addressLocality": "Davie",
+            "addressRegion": "FL",
+            "postalCode": "33314",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.0795,
+            "longitude": -80.2324
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/wachtstetterappraisals"
+          ]
+        }
+      `}
+      </script>
+
     </Helmet>
     <section className="h-[55vh] relative flex items-start justify-center pt-32 text-white bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
       {/* Gradient Overlay */}

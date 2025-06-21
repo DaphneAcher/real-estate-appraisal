@@ -17,23 +17,22 @@ This roadmap outlines the phases of development, focusing on SEO, performance, a
 
 ## 📍 Phase 2: SEO & Performance
 
-- [ ] Add meta tags per page (title, description, Open Graph)
-- [ ] Add structured data (JSON-LD for LocalBusiness schema)
-- [ ] Optimize images (size, lazy loading, `alt` text)
-- [ ] Implement lazy-loading for non-critical JS (like UserWay)
-- [ ] Set up sitemap and robots.txt
+- [X] Add meta tags per page (title, description, Open Graph)
+- [X] Add structured data (JSON-LD for LocalBusiness schema)
+- [X] Optimize images (size, lazy loading, `alt` text)
+- [X] Set up sitemap and robots.txt
 - [ ] Use Lighthouse to audit for performance and fix Core Web Vitals
 
 ---
 
 ## 📍 Phase 3: Native Accessibility (replace UserWay)
 
-- [x] Use semantic HTML (`<main>`, `<section>`, `<header>`, etc.)
-- [ ] Label all form inputs with `label` or `aria-label`
-- [ ] Add `aria-live` and `aria-describedby` for dynamic content
-- [ ] Ensure keyboard navigability (tab index, skip to content link)
-- [ ] High contrast + readable font sizes
-- [ ] Responsive layout tested with screen readers
+- [X] Use semantic HTML (`<main>`, `<section>`, `<header>`, etc.)
+- [X] Label all form inputs with `label` or `aria-label`
+- [X] Add `aria-live` and `aria-describedby` for dynamic content
+- [X] Ensure keyboard navigability (tab index, skip to content link)
+- [X] High contrast + readable font sizes
+- [X] Responsive layout tested with screen readers
 
 ---
 

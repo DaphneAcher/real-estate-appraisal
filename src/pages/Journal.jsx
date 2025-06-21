@@ -24,7 +24,7 @@ export default function Journal() {
             {journalPosts.map(post => (
               <article key={post.id} className="border p-6 rounded shadow bg-white" aria-labelledby={`post-title-${post.id}`}>
                 <h3 id={`post-title-${post.id}`} className="text-xl font-bold mb-2">{post.title}</h3>
-                <p className="text-sm text-gray-500 mb-4">{post.date} • by {post.author}</p>
+                <p className="text-base text-gray-500 mb-4">{post.date} • by {post.author}</p>
                 <p className="text-base text-gray-700 mb-4">{post.content.slice(0, 120)}...</p>
                 <a href="#" className="text-orange-500 font-semibold hover:underline">Read More →</a>
               </article>

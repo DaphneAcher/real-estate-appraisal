@@ -186,7 +186,7 @@ export default function Contact() {
             aria-live="polite"
             tabIndex="-1"
             ref={statusRef}
-            className="mt-4 text-center text-sm text-gray-700 min-h-[1.5rem]"
+            className="mt-4 text-center text-base text-gray-700 min-h-[1.5rem]"
           >
             {status === "success" && <span className="text-green-700">Message sent successfully.</span>}
             {status === "error" && <span className="text-red-600">Something went wrong. Please try again.</span>}

@@ -88,7 +88,7 @@ export default function Quote() {
                 tabIndex="-1"
                 ref={statusRef}
                 aria-label={statusType === "success" ? "Success" : "Error"}
-                className={`text-sm rounded px-4 py-3 ${
+                className={`text-base rounded px-4 py-3 ${
                   statusType === "success"
                     ? "bg-green-100 text-green-800"
                     : "bg-red-100 text-red-800"

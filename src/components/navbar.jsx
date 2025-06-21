@@ -10,8 +10,14 @@ export default function Navbar() {
         <nav className="bg-black border-b border-neutral-800 shadow-sm fixed top-0 left-0 right-0 z-50 font-sans text-white">
         <div className="max-w-screen-xl mx-auto px-8 py-6 flex items-center justify-between">
             {/* Logo */}
-            <img src="/logoVector.svg" alt="Wachtstetter Enterprises Inc logo"  loading="lazy" className="h-16 w-auto" />
-
+            <Link to="/" className="focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
+            <img
+                src="/logoVector.svg"
+                alt="Wachtstetter Enterprises Inc logo"
+                loading="lazy"
+                className="h-16 w-auto"
+            />
+            </Link>
             {/* Desktop Nav Links */}
             <div className="hidden lg:flex flex-1 justify-center gap-10 text-xl font-bold">
             <Link to="/" className="hover:text-blue-300 transition">Home</Link>

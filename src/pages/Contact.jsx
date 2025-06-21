@@ -76,13 +76,19 @@ export default function Contact() {
           content="Get in touch with Wachtstetter Enterprises for accurate and certified property appraisals in South Florida. Call or message us to request a quote."
         />
       </Helmet>
+      
 
       {/* Skip Link for Keyboard Users */}
       <a href="#contact-form" className="sr-only focus:not-sr-only">
         Skip to Contact Form
       </a>
 
-      <main role="main">
+      <a href="#main-content" className="sr-only focus:not-sr-only">
+        Skip to main content
+      </a>
+
+
+      <main id="main-content" role="main">
         <section className="py-12 px-6 max-w-4xl mx-auto" id="contact-form">
           <h2 className="text-3xl font-bold text-center mb-6">Call Us</h2>
           <div className="text-center mb-12 space-y-2 text-orange-600 font-medium">
@@ -126,6 +132,7 @@ export default function Contact() {
               <label htmlFor="email" className="sr-only">Email Address</label>
               <input
                 id="email"
+                aria-describedby={status === "invalidEmail" ? "email-error" : undefined}
                 name="email"
                 type="email"
                 placeholder="Email Address *"

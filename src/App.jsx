@@ -10,54 +10,46 @@ import ServiceAreas from "./pages/ServiceAreas"
 import Location from "./pages/Location"
 import NoPage from "./pages/NoPage"
 import OrderForm from "./pages/OrderForm"
-import { HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async"
 
 function App() {
-
   return (
-    
     <HelmetProvider>
-      <BrowserRouter> 
-      <div className="flex flex-col min-h-screen">
-        <a
+      <BrowserRouter>
+        <div className="flex flex-col min-h-screen">
+
+          <a
             href="#main-content"
             className="absolute left-[-999px] focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:text-black focus:p-2 focus:rounded shadow transition"
           >
             Skip to main content
           </a>
-          
-        <Navbar />
 
-        <main className="flex-grow pt-24">
+          <Navbar />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/journal" element={<Journal />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/service-areas" element={<ServiceAreas />} />
-            <Route path="/order-form" element={<OrderForm />} />
-            <Route path="/404" element={<NoPage />} />
-            <Route path="/:location" element={<Location />} />
+          {/* Main Landmark Region */}
+          <main id="main-content" className="flex-grow pt-24" role="main">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/journal" element={<Journal />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/service-areas" element={<ServiceAreas />} />
+              <Route path="/order-form" element={<OrderForm />} />
+              <Route path="/404" element={<NoPage />} />
+              <Route path="/:location" element={<Location />} />
 
-            {/* Catch-all */}
-            <Route path="*" element={<Navigate to="/404" replace />} />
-          </Routes>
+              {/* Catch-all */}
+              <Route path="*" element={<Navigate to="/404" replace />} />
+            </Routes>
+          </main>
 
-        </main>
-        <Footer />
-
-
-      </div>
+          <Footer />
+        </div>
       </BrowserRouter>
-     </HelmetProvider>
-
-
-  );
-
-
+    </HelmetProvider>
+  )
 }
 
 export default App
-

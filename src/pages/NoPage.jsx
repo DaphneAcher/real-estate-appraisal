@@ -12,7 +12,12 @@ export default function NoPage() {
         />
       </Helmet>
 
-      <div className="min-h-[70vh] flex flex-col justify-center items-center text-center px-6">
+      {/* Accessibility: Skip to Main Content */}
+      <a href="#main-content" className="sr-only focus:not-sr-only">
+        Skip to main content
+      </a>
+
+      <main id="main-content" role="main" className="min-h-[70vh] flex flex-col justify-center items-center text-center px-6">
         <h1 className="text-5xl font-extrabold mb-4">404</h1>
         <h2 className="text-2xl font-semibold mb-2">Page Not Found</h2>
         <p className="text-gray-600 mb-6 max-w-md">
@@ -32,7 +37,7 @@ export default function NoPage() {
             View Services
           </Link>
         </div>
-      </div>
+      </main>
     </>
   );
 }

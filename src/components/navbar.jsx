@@ -10,7 +10,7 @@ export default function Navbar() {
         <nav className="bg-black border-b border-neutral-800 shadow-sm fixed top-0 left-0 right-0 z-50 font-sans text-white">
         <div className="max-w-screen-xl mx-auto px-8 py-6 flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
+            <Link to="/">
             <img
                 src="/logoVector.svg"
                 alt="Wachtstetter Enterprises Inc logo"
@@ -27,13 +27,14 @@ export default function Navbar() {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
             >
-                <button
+                <Link
+                    to="/services"
                     className="hover:text-blue-300 transition focus:outline-none"
                     aria-haspopup="true"
                     aria-expanded={servicesOpen}
                 >
                     Services
-                </button>
+                </Link>
 
                 <div
                     className={`absolute left-0 top-full w-64 bg-white text-black shadow-md rounded z-50 transition-opacity duration-200 ${

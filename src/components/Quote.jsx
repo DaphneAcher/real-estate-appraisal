@@ -4,6 +4,8 @@ export default function Quote() {
   const [statusMessage, setStatusMessage] = useState("");
   const [statusType, setStatusType] = useState(""); // "success" or "error"
   const statusRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef();
 
   function handleQuoteSubmit(e) {
     e.preventDefault();
@@ -42,6 +44,19 @@ export default function Quote() {
     }
   }, [statusMessage]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
   return (
     <main role="main">
       <a href="#quote-form" className="sr-only focus:not-sr-only">
@@ -49,13 +64,14 @@ export default function Quote() {
       </a>
 
       <section
-        className="w-full py-12 px-4 bg-cover bg-center bg-no-repeat"
+        ref={sectionRef}
+        className={`w-full py-12 px-4 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-out transform ${isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}
         style={{ backgroundImage: "url('/src/assets/apprBack.jpg')" }}
         aria-label="Quote section with contact and form"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Side */}
-          <div className="bg-[#5C4033] text-white p-8 rounded shadow">
+          <div className="bg-[#1E3A5F] text-white p-8 rounded shadow">
             <p className="uppercase tracking-wide text-sm mb-2">Let’s Chat</p>
             <h3 className="text-2xl font-bold mb-4">Thinking About an Appraisal?</h3>
             <p className="mb-4">
@@ -156,7 +172,7 @@ export default function Quote() {
 
             <button
               type="submit"
-              className="bg-[#5C4033] hover:bg-[#D4AF37] text-white font-semibold px-6 py-3 rounded w-full"
+              className="bg-[#1E3A5F] hover:bg-[#D4AF37] text-black font-semibold px-6 py-3 rounded w-full"
             >
               Send Message
             </button>

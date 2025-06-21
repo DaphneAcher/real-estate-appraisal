@@ -180,7 +180,7 @@ export default function Location() {
             Whether you're settling an estate, refinancing, or planning a renovation, we provide fast, certified appraisals throughout {formatted}.
           </p>
           <a
-            href="/order-form"
+            href="/contact"
             className="bg-[#5C4033] hover:bg-[#D4AF37] text-white font-bold px-6 py-3 rounded-md transition inline-block"
           >
             Get Your Appraisal Quote

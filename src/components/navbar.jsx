@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
 
     return (
         <>
@@ -15,7 +16,50 @@ export default function Navbar() {
             <div className="hidden lg:flex flex-1 justify-center gap-10 text-xl font-bold">
             <Link to="/" className="hover:text-blue-300 transition">Home</Link>
             <Link to="/about" className="hover:text-blue-300 transition">About</Link>
-            <Link to="/services" className="hover:text-blue-300 transition">Services</Link>
+            <div 
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+            >
+                <button
+                    className="hover:text-blue-300 transition focus:outline-none"
+                    aria-haspopup="true"
+                    aria-expanded={servicesOpen}
+                >
+                    Services
+                </button>
+
+                <div
+                    className={`absolute left-0 top-full w-64 bg-white text-black shadow-md rounded z-50 transition-opacity duration-200 ${
+                        servicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                    }`}
+                    role="menu"
+                    aria-label="Services submenu"
+                >
+                    <Link
+                        to="/services/residential"
+                        className="block px-4 py-2 hover:bg-blue-100 focus:bg-blue-100"
+                        role="menuitem"
+                    >
+                        Residential Appraisals
+                    </Link>
+                    <Link
+                        to="/services/commercial"
+                        className="block px-4 py-2 hover:bg-blue-100 focus:bg-blue-100"
+                        role="menuitem"
+                    >
+                        Commercial Appraisals
+                    </Link>
+                    <Link
+                        to="/services/fema"
+                        className="block px-4 py-2 hover:bg-blue-100 focus:bg-blue-100"
+                        role="menuitem"
+                    >
+                        FEMA 50% Rule Appraisals
+                    </Link>
+                </div>
+            </div>
+
             <Link to="/journal" className="hover:text-blue-300 transition">Journal</Link>
             <Link to="/contact" className="hover:text-blue-300 transition">Contact</Link>
             </div>
@@ -64,5 +108,4 @@ export default function Navbar() {
         </nav>
         </>
     )
-
 }

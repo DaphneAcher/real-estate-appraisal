@@ -10,6 +10,10 @@ import ServiceAreas from "./pages/ServiceAreas"
 import Location from "./pages/Location"
 import NoPage from "./pages/NoPage"
 import OrderForm from "./pages/OrderForm"
+import Residential from "./pages/Service/Residential"
+import Commercial from "./pages/Service/Commercial"
+import FEMA from "./pages/Service/FEMA"
+import Post from "./pages/Post";
 import { HelmetProvider } from "react-helmet-async"
 
 function App() {
@@ -35,9 +39,13 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/journal" element={<Journal />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/residential" element={<Residential />} />
+              <Route path="/services/commercial" element={<Commercial />} />
+              <Route path="/services/fema" element={<FEMA />} />
               <Route path="/service-areas" element={<ServiceAreas />} />
               <Route path="/order-form" element={<OrderForm />} />
               <Route path="/404" element={<NoPage />} />
+              <Route path="/journal/:slug" element={<Post />} />
               <Route path="/:location" element={<Location />} />
 
               {/* Catch-all */}

@@ -1,5 +1,7 @@
 import Quote from "../components/Quote";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
 
 export default function Services() {
   return (
@@ -30,7 +32,12 @@ export default function Services() {
               <p className="text-base mb-4">
                 We offer thorough residential appraisal services, including single-family homes, condos, townhouses, and luxury estates—tailored to meet lending, legal, or planning needs.
               </p>
-              <a href="#" className="text-orange-500 font-semibold hover:underline">READ MORE →</a>
+              <Link
+                to="/services/residential"
+                className="text-orange-500 font-semibold hover:underline focus:outline focus:ring-2 focus:ring-orange-400"
+              >
+                READ MORE →
+              </Link>
             </div>
 
             {/* Card 2 */}
@@ -39,7 +46,12 @@ export default function Services() {
               <p className="text-base mb-4">
                 Our team appraises income-producing and owner-occupied properties such as retail buildings, warehouses, and multi-family housing using income and market analysis.
               </p>
-              <a href="#" className="text-orange-500 font-semibold hover:underline">READ MORE →</a>
+              <Link
+                to="/services/commercial"
+                className="text-orange-500 font-semibold hover:underline focus:outline focus:ring-2 focus:ring-orange-400"
+              >
+                READ MORE →
+              </Link>
             </div>
 
             {/* Card 3 */}
@@ -48,13 +60,19 @@ export default function Services() {
               <p className="text-base mb-4">
                 We help property owners navigate FEMA’s 50% Rule by providing detailed appraisals required for substantial improvement or reconstruction after damage.
               </p>
-              <a href="#" className="text-orange-500 font-semibold hover:underline">READ MORE →</a>
+              <Link
+                to="/services/fema"
+                className="text-orange-500 font-semibold hover:underline focus:outline focus:ring-2 focus:ring-orange-400"
+              >
+                READ MORE →
+              </Link>
             </div>
           </div>
         </section>
 
         <Quote />
       </main>
+
     </>
   );
 }

@@ -38,9 +38,10 @@ This roadmap outlines the phases of development, focusing on SEO, performance, a
 
 ## 📍 Phase 4: Content & Polish
 
-- [ ] Write journal/blog entries (real estate tips, trends, FAQ)
+- [X] Write journal/blog entries (real estate tips, trends, FAQ)
 - [ ] Add testimonials dynamically (CMS or static JSON file)
 - [ ] Add favicon and brand colors
+- [ ] Fix Footer
 - [ ] Refine mobile touch areas (button sizes, spacing)
 - [ ] Add animation or transitions (deferred until final polish)
 

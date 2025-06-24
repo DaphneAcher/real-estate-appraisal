@@ -20,52 +20,67 @@ export default function Services() {
       </a>
 
       <main id="main-content" role="main">
-        <section className="py-12 px-6 max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">What We Offer</h2>
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            aria-label="List of appraisal services"
-          >
+        <section className="py-24 px-6 max-w-screen-2xl mx-auto">
+          <h2 className="text-5xl font-bold text-center mb-20 font-playfair">
+            Our Appraisal Services
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Card 1 */}
-            <div className="bg-white border p-6 rounded shadow">
-              <h3 className="text-xl font-bold mb-2">Residential Appraisals</h3>
-              <p className="text-base mb-4">
-                We offer thorough residential appraisal services, including single-family homes, condos, townhouses, and luxury estates—tailored to meet lending, legal, or planning needs.
-              </p>
-              <Link
-                to="/services/residential"
-                className="text-orange-500 font-semibold hover:underline focus:outline focus:ring-2 focus:ring-orange-400"
-              >
-                READ MORE →
-              </Link>
+            <div className="bg-white border border-neutral-200 px-10 py-14 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 flex items-start gap-4 animate-fade-up delay-[0ms]">
+              <div className="text-4xl"></div>
+              <div>
+                <h3 className="text-3xl font-dmserif text-black mb-3">
+                  Residential Appraisals
+                </h3>
+                <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                  Appraisals for single-family homes, condos, and luxury estates — built for lending, legal, or planning purposes.
+                </p>
+                <Link
+                  to="/services/residential"
+                  className="text-[#C26B32] text-md font-medium hover:underline focus:outline focus:ring-2 focus:ring-[#C26B32]"
+                >
+                  READ MORE →
+                </Link>
+              </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white border p-6 rounded shadow">
-              <h3 className="text-xl font-bold mb-2">Commercial Appraisals</h3>
-              <p className="text-base mb-4">
-                Our team appraises income-producing and owner-occupied properties such as retail buildings, warehouses, and multi-family housing using income and market analysis.
-              </p>
-              <Link
-                to="/services/commercial"
-                className="text-orange-500 font-semibold hover:underline focus:outline focus:ring-2 focus:ring-orange-400"
-              >
-                READ MORE →
-              </Link>
+            <div className="bg-white border border-neutral-200 px-10 py-14 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 flex items-start gap-4 animate-fade-up delay-[100ms]">
+              <div className="text-4xl"></div>
+              <div>
+                <h3 className="text-3xl font-dmserif text-black mb-3">
+                  Commercial Appraisals
+                </h3>
+                <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                  Accurate valuation for retail, office, and income-generating properties — using both market and income approaches.
+                </p>
+                <Link
+                  to="/services/commercial"
+                  className="text-[#C26B32] text-md font-medium hover:underline focus:outline focus:ring-2 focus:ring-[#C26B32]"
+                >
+                  READ MORE →
+                </Link>
+              </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white border p-6 rounded shadow">
-              <h3 className="text-xl font-bold mb-2">FEMA 50% Rule Appraisals</h3>
-              <p className="text-base mb-4">
-                We help property owners navigate FEMA’s 50% Rule by providing detailed appraisals required for substantial improvement or reconstruction after damage.
-              </p>
-              <Link
-                to="/services/fema"
-                className="text-orange-500 font-semibold hover:underline focus:outline focus:ring-2 focus:ring-orange-400"
-              >
-                READ MORE →
-              </Link>
+            <div className="bg-white border border-neutral-200 px-10 py-14 rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 flex items-start gap-4 animate-fade-up delay-[200ms]">
+              <div className="text-4xl"></div>
+              <div>
+                <h3 className="text-3xl font-dmserif text-black mb-3">
+                  FEMA 50% Rule Appraisals
+                </h3>
+                <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                  Specialized “structure-only” appraisals for FEMA compliance — required for rebuilds and improvements in flood-prone zones.
+                </p>
+                <Link
+                  to="/services/fema"
+                  className="text-[#C26B32] text-md font-medium hover:underline focus:outline focus:ring-2 focus:ring-[#C26B32]"
+                >
+                  READ MORE →
+                </Link>
+              </div>
             </div>
           </div>
         </section>

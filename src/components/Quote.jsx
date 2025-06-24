@@ -66,7 +66,7 @@ export default function Quote() {
       <section
         ref={sectionRef}
         className={`w-full py-12 px-4 bg-cover bg-center bg-no-repeat transition-all duration-700 ease-out transform ${isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}
-        style={{ backgroundImage: "url('/src/assets/apprBack.jpg')" }}
+        style={{ backgroundImage: "url('/src/assets/hero2.jpg')" }}
         aria-label="Quote section with contact and form"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -172,7 +172,7 @@ export default function Quote() {
 
             <button
               type="submit"
-              className="bg-[#1E3A5F] hover:bg-[#D4AF37] text-black font-semibold px-6 py-3 rounded w-full"
+              className="bg-[#1E3A5F] hover:bg-[#D4AF37] text-white font-semibold px-6 py-3 rounded w-full"
             >
               Send Message
             </button>

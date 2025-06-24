@@ -33,7 +33,7 @@ export default function Location() {
       <main id="main-content" role="main">
         <section
           className="relative h-[55vh] flex flex-col justify-center items-center text-center px-6 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/src/assets/hero1.jpg')" }}
+          style={{ backgroundImage: "url('/src/assets/hero5.jpg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10 z-0"></div>
           <div className="relative z-10 px-6">

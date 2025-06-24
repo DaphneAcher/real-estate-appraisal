@@ -1,9 +1,42 @@
 import Quote from "../components/Quote";
 import { Link } from "react-router-dom";
-import heroImage from '/src/assets/hero1.jpg';
+import heroImage from '/src/assets/hero5.jpg';
 import { Helmet } from "react-helmet-async";
+import { useRef, useEffect, useState } from "react";
+import residentialIcon from "../assets/residential-icon.png";
+import commericalIcon from "../assets/commercial-icon.png";
+import femaIcon from "../assets/FEMA-icon.png";
+
+
+
 
 export default function Home() {
+
+  const headingRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const target = headingRef.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(target);
+
+    return () => {
+      observer.unobserve(target);
+    };
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -49,6 +82,7 @@ export default function Home() {
               },
               "sameAs": [
                 "https://www.facebook.com/wachtstetterappraisals"
+                "https://www.google.com/maps/place/Wachtstetter+Enterprises+Inc/@26.1546469,-81.1077241,9z/data=!3m1!4b1!4m6!3m5!1s0x88d9a84ef424eb1f:0xd8d040967946ca56!8m2!3d26.1561484!4d-80.4482804!16s%2Fg%2F1tg_xwwl"
               ]
             }
           `}
@@ -99,24 +133,24 @@ export default function Home() {
 
               {/* Promo 1 */}
               <div className="p-8 animate-fade-up delay-[0ms]">
-                <h3 className="font-playfair text-xl font-semibold mb-2 text-neutral-900">Local Expertise Since 1987  </h3>
-                <p className="text-base text-gray-700 leading-relaxed">
+                <h3 className="font-playfair text-2xl font-semibold mb-2 text-neutral-900">Local Expertise Since 1987  </h3>
+                <p className="text-xl text-gray-700 leading-relaxed">
                   Deep appraisal knowledge across Broward & South Florida communities.
                 </p>
               </div>
 
               {/* Promo 2 — Blue Accent */}
               <div className="p-8 bg-[#1E3A5F] text-white animate-fade-up delay-[100ms]">
-                <h3 className="font-playfair text-xl font-semibold mb-2">Competitive Pricing</h3>
-                <p className="text-base leading-relaxed">
+                <h3 className="font-playfair text-2xl font-semibold mb-2">Competitive Pricing</h3>
+                <p className="text-xl leading-relaxed">
                   Transparent and fair rates — no hidden fees, ever.
                 </p>
               </div>
 
               {/* Promo 3 */}
               <div className="p-8 animate-fade-up delay-[200ms]">
-                <h3 className="font-playfair text-xl font-semibold mb-2 text-neutral-900">Certified, Multi‑Scope Appraisals  </h3>
-                <p className="text-base text-gray-700 leading-relaxed">
+                <h3 className="font-playfair text-2xl font-semibold mb-2 text-neutral-900">Certified, Multi‑Scope Appraisals  </h3>
+                <p className="text-xl text-gray-700 leading-relaxed">
                   Residential, Commercial, FEMA 50% Rule coverage—with court‑ready reports.
                 </p>
               </div>
@@ -129,39 +163,77 @@ export default function Home() {
 
 
       {/* Our Appraisal Services Section */}
-      <section className="py-20 px-6 bg-[#F5F1EA]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold font-playfair mb-12 text-center text-neutral-900 animate-fade-up">
-            Our Appraisal Services
-          </h2>
+      <section className="py-28 px-6 bg-white">
+  <div className="max-w-7xl mx-auto text-center">
+    {/* Section Heading */}
+<div className="relative mb-20" ref={headingRef}>
+  <p className={`text-xl uppercase tracking-widest text-[#C3A36B] font-semibold relative z-50 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+    Our Service
+  </p>
+  <h2 className={`text-[10rem] font-extrabold text-neutral-200 leading-none -mb-6 z-10 transition-all duration-700 ease-out delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+    —SERVICES—
+  </h2>
+  <h3 className={`text-7xl md:text-6xl font-playfair font-bold text-neutral-900 relative z-50 transition-all duration-700 ease-out delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+    What We Do
+  </h3>
+</div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Residential */}
-            <div className="bg-white rounded-xl shadow-md p-8 border border-neutral-200 translate-y-6 opacity-0 animate-fade-up delay-[0ms]">
-              <h3 className="text-lg font-playfair font-semibold mb-2">Residential Appraisals</h3>
-              <p className="text-gray-700 text-sm">
-                Single-family homes, townhomes, condos, and luxury properties—tailored reports for loans, legal, and planning needs.
-              </p>
-            </div>
+  {/* Service Cards */}
+    <div className="flex flex-wrap justify-center gap-4 md:gap-5">
+      {/* Residential */}
+      <div className="group bg-white rounded-xl shadow-md h-[280px] w-[280px] flex flex-col items-center justify-between p-8 border border-neutral-200 transition duration-300 ease-in-out hover:bg-[#FAF4EB] hover:border-[#D4AF37] hover:-translate-y-1 hover:shadow-xl translate-y-6 opacity-0 animate-fade-up delay-[0ms]">
+        <span className="text-4xl transition-colors duration-300 group-hover:text-[#D4AF37]">
+          <img
+            src={residentialIcon}
+            alt="Residential home icon"
+            className="w-12 h-12 mb-4"
+            loading="lazy"
+          />
 
-            {/* Commercial */}
-            <div className="bg-white rounded-xl shadow-md p-8 border border-neutral-200 translate-y-6 opacity-0 animate-fade-up delay-[100ms]">
-              <h3 className="text-lg font-playfair font-semibold mb-2">Commercial Appraisals</h3>
-              <p className="text-gray-700 text-sm">
-                Warehouses, retail, and income-producing properties, appraised using income and market-based approaches.
-              </p>
-            </div>
+        </span>
+        <h3 className="text-3xl font-playfair font-semibold text-neutral-900 transition-colors duration-300 group-hover:text-[#D4AF37] mt-4">
+          Residential Appraisals
+        </h3>
+        <a href="/service/residential" className="text-lg font-semibold text-[#C3A36B] mt-4 group-hover:underline group-hover:text-[#D4AF37] transition">Read More →</a>
+      </div>
 
-            {/* FEMA */}
-            <div className="bg-white rounded-xl shadow-md p-8 border border-neutral-200 translate-y-6 opacity-0 animate-fade-up delay-[200ms]">
-              <h3 className="text-lg font-playfair font-semibold mb-2">FEMA 50% Rule Appraisals</h3>
-              <p className="text-gray-700 text-sm">
-                We help property owners comply with FEMA requirements by providing reliable structure-only valuation reports.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Commercial */}
+      <div className="group bg-white rounded-xl shadow-md h-[280px] w-[280px] flex flex-col items-center justify-between p-8 border border-neutral-200 transition duration-300 ease-in-out hover:bg-[#FAF4EB] hover:border-[#D4AF37] hover:-translate-y-1 hover:shadow-xl translate-y-6 opacity-0 animate-fade-up delay-[100ms]">
+        <span className="text-4xl transition-colors duration-300 group-hover:text-[#D4AF37]">
+            <img
+            src={commericalIcon}
+            alt="Commercial home icon"
+            className="w-12 h-12 mb-4"
+            loading="lazy"
+          />
+        </span>
+        <h3 className="text-3xl font-playfair font-semibold text-neutral-900 transition-colors duration-300 group-hover:text-[#D4AF37] mt-4">
+          Commercial Appraisals
+        </h3>
+        <a href="/service/commercial" className="text-lg font-semibold text-[#C3A36B] mt-4 group-hover:underline group-hover:text-[#D4AF37] transition">Read More →</a>
+      </div>
+
+      {/* FEMA */}
+      <div className="group bg-white rounded-xl shadow-md h-[280px] w-[280px] flex flex-col items-center justify-between p-8 border border-neutral-200 transition duration-300 ease-in-out hover:bg-[#FAF4EB] hover:border-[#D4AF37] hover:-translate-y-1 hover:shadow-xl translate-y-6 opacity-0 animate-fade-up delay-[200ms]">
+        <span className="text-4xl transition-colors duration-300 group-hover:text-[#D4AF37]">
+            <img
+            src={femaIcon}
+            alt="FEMA home icon"
+            className="w-12 h-12 mb-4"
+            loading="lazy"
+          />
+        </span>
+        <h3 className="text-3xl font-playfair font-semibold text-sneutral-900 transition-colors duration-300 group-hover:text-[#D4AF37] mt-4">
+          FEMA 50% Rule Appraisals
+        </h3>
+        <a href="/service/fema" className="text-lg font-semibold text-[#C3A36B] mt-4 group-hover:underline group-hover:text-[#D4AF37] transition">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 
         {/* Who We Are */}
@@ -193,18 +265,46 @@ export default function Home() {
 
         {/* Testimonials */}
         <section className="py-16 px-6 max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-8 font-playfair">What Our Clients Say</h2>
-          <div className="space-y-10">
-            <blockquote className="text-gray-700 text-base italic">
-              “Tom is professional, timely, and accurate. We’ve used Wachtstetter Enterprises for years and always recommend them to our clients.”
-              <br /><span className="block mt-2 font-semibold text-[#C08552]">— South Florida Real Estate Attorney</span>
+          <h2 className="text-2xl font-bold mb-10 font-playfair">What Our Clients Say</h2>
+
+          <div className="space-y-12">
+            {/* Review 1 */}
+            <blockquote className="bg-white border border-neutral-200 p-6 rounded-lg shadow-md animate-fade-up delay-[0ms]">
+              <p className="text-gray-800 italic">
+                “I have used Tom Wachtstetter for many years. He is always professional and courteous. Highly recommend him for all your appraisal needs.”
+              </p>
+              <footer className="mt-4 text-sm font-semibold text-[#C08552]">— Maria G. (Google Review)</footer>
             </blockquote>
-            <blockquote className="text-gray-700 text-base italic">
-              “Clear reports, great communication, and fast delivery. What more can you ask for from an appraiser?”
-              <br /><span className="block mt-2 font-semibold text-[#C08552]">— Mortgage Broker, Boca Raton</span>
+
+            {/* Review 2 */}
+            <blockquote className="bg-white border border-neutral-200 p-6 rounded-lg shadow-md animate-fade-up delay-[100ms]">
+              <p className="text-gray-800 italic">
+                “Prompt service, extremely detailed, and gave us peace of mind during our home renovation process. We trust Tom’s judgment completely.”
+              </p>
+              <footer className="mt-4 text-sm font-semibold text-[#C08552]">— Jason T. (Google Review)</footer>
+            </blockquote>
+
+            {/* Review 3 */}
+            <blockquote className="bg-white border border-neutral-200 p-6 rounded-lg shadow-md animate-fade-up delay-[200ms]">
+              <p className="text-gray-800 italic">
+                “Great communication, fast turnaround, and reports that are accepted without issue. Best appraiser in Broward County.”
+              </p>
+              <footer className="mt-4 text-sm font-semibold text-[#C08552]">— Danielle M. (Google Review)</footer>
             </blockquote>
           </div>
+
+          <div className="mt-8">
+            <a
+              href="https://www.google.com/maps/place/Wachtstetter+Enterprises+Inc/@26.1546469,-81.1077241,9z/data=!3m1!4b1!4m6!3m5!1s0x88d9a84ef424eb1f:0xd8d040967946ca56!8m2!3d26.1561484!4d-80.4482804!16s%2Fg%2F1tg_xwwl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-blue-700 underline font-semibold"
+            >
+              Read all reviews on Google →
+            </a>
+          </div>
         </section>
+
 
         <Quote />
       </main>
